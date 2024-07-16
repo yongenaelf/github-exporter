@@ -25,12 +25,12 @@ This exporter is setup to take input from environment variables. All variables a
 
 ## Install and deploy
 
-Run manually from Docker Hub:
+Run manually from GitHub Container Registry:
 ```
-docker run -d --restart=always -p 9171:9171 -e REPOS="infinityworks/ranch-eye, infinityworks/prom-conf" githubexporter/github-exporter
+docker run -d --restart=always -p 9171:9171 -e REPOS="AElfProject/AElf" ghcr.io/yongenaelf/github-exporter
 ```
 
-Run manually from Docker Hub (With GitHub App):
+Run manually from GitHub Container Registry (With GitHub App):
 ```
 docker run -d --restart=always -p 9171:9171 --read-only -v ./key.pem:/key.pem -e GITHUB_APP=true -e GITHUB_APP_ID= -e GITHUB_APP_INSTALLATION_ID= -e GITHUB_APP_KEY_PATH=/key.pem <IMAGE_NAME>
 ```
@@ -50,7 +50,7 @@ github-exporter:
       - 9171
     ports:
       - 9171:9171
-    image: githubexporter/github-exporter:latest
+    image: ghcr.io/yongenaelf/github-exporter:latest
     environment:
       - REPOS=<REPOS you want to monitor>
       - GITHUB_TOKEN=<your github api token>
@@ -102,6 +102,3 @@ Prior to running the following command ensure the number has been increased to d
 ```bash
 ./release-version.sh
 ```
-
-## Metadata
-[![](https://images.microbadger.com/badges/image/infinityworks/github-exporter.svg)](http://microbadger.com/images/infinityworks/github-exporter "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/infinityworks/github-exporter.svg)](http://microbadger.com/images/infinityworks/github-exporter "Get your own version badge on microbadger.com")
