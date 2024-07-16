@@ -27,7 +27,7 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: image
-          image-ref: 'ghcr.io/${{ github.repository }}/github-exporter:${{ steps.vars.outputs.short_sha }}'
+          image-ref: 'ghcr.io/${{ github.repository }}:${{ steps.vars.outputs.short_sha }}'
           format: 'sarif'
           output: 'trivy-results.sarif'
 
