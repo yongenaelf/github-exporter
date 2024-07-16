@@ -16,12 +16,20 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          ref: release
+
+      - name: Set short git commit SHA
+        id: vars
+        run: |
+          calculatedSha=$(git rev-parse --short ${{ github.sha }})
+          echo "short_sha=$calculatedSha" >> "$GITHUB_OUTPUT"
 
       - name: Run Trivy
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: image
-          image-ref: 'ghcr.io/${{ github.repository }}/github-exporter'
+          image-ref: 'ghcr.io/${{ github.repository }}/github-exporter:${{ steps.vars.outputs.short_sha }}'
           format: 'sarif'
           output: 'trivy-results.sarif'
 
