@@ -1,12 +1,12 @@
 package main
 
 import (
-	conf "github.com/githubexporter/github-exporter/config"
-	"github.com/githubexporter/github-exporter/exporter"
-	"github.com/githubexporter/github-exporter/http"
 	"github.com/infinityworks/go-common/logger"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/sirupsen/logrus"
+	conf "github.com/yongenaelf/github-exporter/config"
+	"github.com/yongenaelf/github-exporter/exporter"
+	"github.com/yongenaelf/github-exporter/http"
 )
 
 var (

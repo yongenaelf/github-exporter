@@ -1,4 +1,4 @@
-module github.com/githubexporter/github-exporter
+module github.com/yongenaelf/github-exporter
 
 go 1.22
 

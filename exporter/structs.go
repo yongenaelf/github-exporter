@@ -3,8 +3,8 @@ package exporter
 import (
 	"net/http"
 
-	"github.com/githubexporter/github-exporter/config"
 	"github.com/prometheus/client_golang/prometheus"
+	"github.com/yongenaelf/github-exporter/config"
 )
 
 // Exporter is used to store Metrics data and embeds the config struct.

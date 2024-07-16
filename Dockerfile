@@ -3,8 +3,8 @@ LABEL maintainer="githubexporter"
 
 ENV GO111MODULE=on
 
-COPY ./ /go/src/github.com/githubexporter/github-exporter
-WORKDIR /go/src/github.com/githubexporter/github-exporter
+COPY ./ /go/src/github.com/yongenaelf/github-exporter
+WORKDIR /go/src/github.com/yongenaelf/github-exporter
 
 RUN go mod download \
     && go test ./... \

@@ -8,11 +8,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/githubexporter/github-exporter/config"
-	"github.com/githubexporter/github-exporter/exporter"
-	web "github.com/githubexporter/github-exporter/http"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/steinfletcher/apitest"
+	"github.com/yongenaelf/github-exporter/config"
+	"github.com/yongenaelf/github-exporter/exporter"
+	web "github.com/yongenaelf/github-exporter/http"
 )
 
 func TestHomepage(t *testing.T) {
