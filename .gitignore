@@ -5,3 +5,4 @@
 
 # Build artifact
 ./main
+.env

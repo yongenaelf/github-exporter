@@ -1,5 +1,3 @@
-version: "2"
-
 services:
   github-exporter:
     tty: true
@@ -8,7 +6,6 @@ services:
       - 9171
     ports:
       - 9171:9171
-    image: githubexporter/github-exporter:latest
-    environment:
-      - REPOS=<REPOS you want to monitor>
-      - GITHUB_TOKEN=<your github api token>
+    image: ghcr.io/yongenaelf/github-exporter:sha-a19c694
+    env_file:
+      - .env
